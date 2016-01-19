@@ -7,22 +7,17 @@ var app             = express();
 
 var port = process.env.PORT || 80;
 
-var environments = {
-    "dev": "src",
-    "prod": "dist"
-};
-
-var env = "dev";
+var env = "src";
 if (process.argv.length > 2) {
-    if (process.argv[2] === "prod") {
-        env = "prod";
+    if (process.argv[2] === "dist") {
+        env = "dist";
     }
 }
 
-app.use(express.static(environments[env]));
+app.use(express.static(env));
 
 app.listen(port);
 
 console.log('Environment set to ' + env);
-console.log('Static files served from ' + environments[env] + '/ directory');
+console.log('Static files served from ' + env + '/ directory');
 console.log('Server listening on port ' + port);

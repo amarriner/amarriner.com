@@ -10,9 +10,9 @@ module.exports = function(grunt) {
         concat: {
             css: {
                 src: [
-                    'src/libs/html5-boilerplate/dist/css/normalize.css',
-                    'src/libs/html5-boilerplate/dist/css/main.css',
-                    'src/libs/font-awesome/css/font-awesome.css'
+                    'src/bower_components/html5-boilerplate/dist/css/main.css',
+                    'src/bower_components/html5-boilerplate/dist/css/normalize.css',
+                    'src/bower_components/font-awesome/css/font-awesome.css'
                 ],
                 dest: 'src/css/libs.css'
             }
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
             fontAwesome: {
                 files: [{
                     expand: true,
-                    cwd: 'src/libs/font-awesome/fonts',
+                    cwd: 'src/bower_components/font-awesome/fonts',
                     src: ['*'],
                     flatten: true,
                     dest: 'dist/fonts/'
@@ -53,6 +53,16 @@ module.exports = function(grunt) {
                     dest: 'dist/images/'
                 }]
             },
+            
+            views: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/js/views',
+                    src: ['*.html'],
+                    flatten: false,
+                    dest: 'dist/js/views'
+                }]
+            }
         },
         
         cssmin: {
@@ -99,6 +109,27 @@ module.exports = function(grunt) {
             ]
         },
         
+        preprocess: {
+            dist: {
+                options: {
+                    context: {
+                        NODE_ENV: 'prod'
+                    }
+                },
+                src: 'src/templates/index.html',
+                dest: 'dist/index.html'
+            },
+            src: {
+                options: {
+                    context: {
+                        NODE_ENV: 'dev'
+                    }
+                },
+                src: 'src/templates/index.html',
+                dest: 'src/index.html'
+            }
+        },
+        
         less: {
             app: {
                 files: {
@@ -116,13 +147,21 @@ module.exports = function(grunt) {
                 files: {
                     'dist/js/app.js': [
                         'src/js/**/*.js'
-                     ]
+                     ],
+                    'dist/js/libs.js': [
+                        'src/bower_components/html5-boilerplate/dist/js/main.js',
+                        'src/bower_components/jquery/dist/jquery.js',
+                        'src/bower_components/angular/angular.js',
+                        'src/bower_components/angular-route/angular-route.js',
+                        'src/bower_components/angular-bootstrap/ui-bootstrap-tpls.js'
+                    ]
                 }
             },
             
             minify: {
                 files: {
-                    'dist/js/app.min.js': ['dist/js/app.js']
+                    'dist/js/app.min.js': ['dist/js/app.js'],
+                    'dist/js/libs.min.js': ['dist/js/libs.js']
                 }
             }
         },
@@ -143,6 +182,11 @@ module.exports = function(grunt) {
             less: {
                 files: 'src/less/app.less',
                 tasks: ['less']
+            },
+            
+            preprocess: {
+                files: 'src/templates/*.html',
+                tasks: ['preprocess']
             }
         }
     });
@@ -157,9 +201,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-html-angular-validate');
     grunt.loadNpmTasks('grunt-jsonlint');
+    grunt.loadNpmTasks('grunt-preprocess');
     
     grunt.registerTask('lint', ['htmlangular', 'jsonlint', 'jshint' ]);
-    grunt.registerTask('minify', ['uglify:concat', 'replace', 'uglify:minify', 'concat:css', 'copy:css', 'cssmin']);
-    grunt.registerTask('build', ['clean:dist', 'lint', 'minify', 'copy:fontAwesome', 'copy:images']);
+    grunt.registerTask('minify', ['uglify:concat', 'uglify:minify', 'concat:css', 'copy:css', 'cssmin']);
+    grunt.registerTask('build', ['clean:dist', 'preprocess', 'lint', 'minify', 'copy:fontAwesome', 'copy:images', 'copy:views']);
     
 };
