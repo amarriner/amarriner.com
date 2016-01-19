@@ -12,7 +12,11 @@
     })  
     .controller('NavbarCtrl', ['$scope', '$window', '$location',
         function($scope, $window, $location) {
-                       
+            
+            $scope.$on('$routeChangeSuccess', function() {
+                $scope.location = $location.path();
+            });
+            
             $scope.menus = [];
             $scope.menus[0] = true;
             $scope.menus[1] = true;

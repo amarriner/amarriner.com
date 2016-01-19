@@ -12,9 +12,9 @@
     
         <div id="navbar" class="navbar-collapse collapse" uib-collapse="menus[0]">
             <ul class="nav navbar-nav">
-                <li><a href="#/bots">Bots</a></li>
-                <li><a href="#/music">Music</a></li>
-                <li><a href="#/spelunky">Spelunky</a></li>
+                <li ng-class="{active: location == '/bots'}"><a href="#/bots">Bots</a></li>
+                <li ng-class="{active: location == '/music'}"><a href="#/music">Music</a></li>
+                <li ng-class="{active: location == '/spelunky'}"><a href="#/spelunky">Spelunky</a></li>
                 <li class="dropdown" ng-class="{open: !menus[1]}">
                     <a ng-click="resetMenu(1)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Old Stuff 
                         <i class="fa fa-caret-down" ng-show="menus[1]"></i>
@@ -44,14 +44,14 @@
                     </a>
                     
                     <ul class="dropdown-menu" role="menu" id="social" uib-collapse="menus[2]">
-                        <li class="twitter"><a href="https://twitter.com/amarriner">Twitter</a></li>
-                        <li class="github"><a href="https://github.com/amarriner">GitHub</a></li>
-                        <li class="twitch"><a href="http://twitch.tv/amarriner">Twitch</a></li>
-                        <li class="youtube"><a href="http://youtube.com/amarriner">YouTube</a></li>
-                        <li class="sound_cloud"><a href="https://soundcloud.com/amarriner">SoundCloud</a></li>
-                        <li class="tumblr"><a href="http://amarriner.tumblr.com/">Tumblr</a></li>
-                        <li class="google_plus"><a href="http://google.com/+AaronMarriner">Google+</a></li>
-                        <li class="bandcamp"><a href="http://amarriner.bandcamp.com/">Bandcamp</a></li>
+                        <li><a class="twitter" href="https://twitter.com/amarriner">Twitter</a></li>
+                        <li><a class="github" href="https://github.com/amarriner">GitHub</a></li>
+                        <li><a class="twitch" href="http://twitch.tv/amarriner">Twitch</a></li>
+                        <li><a class="youtube" href="http://youtube.com/amarriner">YouTube</a></li>
+                        <li><a class="sound_cloud" href="https://soundcloud.com/amarriner">SoundCloud</a></li>
+                        <li><a class="tumblr" href="http://amarriner.tumblr.com/">Tumblr</a></li>
+                        <li><a class="google_plus" href="http://google.com/+AaronMarriner">Google+</a></li>
+                        <li><a class="bandcamp" href="http://amarriner.bandcamp.com/">Bandcamp</a></li>
                     </ul>
                     
                 </li>

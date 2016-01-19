@@ -15,7 +15,6 @@
             Github.get().then(function(response) {
                 $scope.repoCount = response.data.length;
                 $scope.data = response.data.slice(0,3);
-                console.log($scope.data);
             }).catch(function(response) {
                 $scope.error = "Error retrieving Github data!";
             });
