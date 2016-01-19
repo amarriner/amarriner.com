@@ -6725,5 +6725,42 @@ button.close {
   }
 }
 body {
+  font-family: 'Open Sans', sans-serif;
   margin-top: 65px;
+}
+h2 {
+  font-weight: 800;
+}
+h3 {
+  font-weight: 700;
+  margin-top: 30px;
+}
+.nav > li.open {
+  background-color: white;
+}
+.navbar-brand {
+  background-image: url(../images/face_amarriner.jpg);
+  background-repeat: no-repeat;
+  background-size: 42px;
+  background-position: 5px center;
+  padding-left: 55px;
+  margin-left: 5px;
+}
+.navbar-default .navbar-brand {
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+div#sub {
+  margin-bottom: 15px;
 }

@@ -16,9 +16,10 @@
             $scope.menus = [];
             $scope.menus[0] = true;
             $scope.menus[1] = true;
+            $scope.menus[2] = true;
             
             $scope.resetMenu = function(open) {
-                for (var i = 0; i < $scope.menus.length; i++) {
+                for (var i = 1; i < $scope.menus.length; i++) {
                     if (open === i) {
                         $scope.menus[i] = !$scope.menus[i];
                     }

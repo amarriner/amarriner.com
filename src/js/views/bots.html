@@ -1,0 +1,71 @@
+<h2>Twitter Bots</h2>
+
+<hr>
+
+<div id="sub" class="text-muted">
+    <div>
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+        December 05, 2014 
+        &nbsp;<i class="fa fa-tags" aria-hidden="true"></i>&nbsp;
+                        bots, 
+                        twitter, 
+                        programming
+    </div>
+</div>
+
+<div id="main">
+   <p>Since I don't have a lot of free time for larger projects these days, I find that small focused ideas are a good way 
+to learn and stay sharp (or sharp-ish, anyway). One of my favorite things to work on is automated scripts that post 
+things to <a href="https://twitter.com">Twitter</a>.</p>
+
+    <p>Some of the most interesting bots that other people make are ones that seem like they're written by humans. I don't 
+have a lot of experience in natural language processing so my bots generally don't do this. If they do they usually 
+run on a series of templates.</p>
+
+<p>You can see a full <a href="https://twitter.com/amarriner/lists/my-bots">list of my bots</a> on Twitter, and I'll list a few of 
+my favorites below. The <a href="https://twitter.com/search?q=%23botALLY&amp;src=typd">#botALLY hashtag</a> and the <a href="https://twitter.com/botALLY">@botALLY 
+account</a> are good ways to discover twitter bots made by others.</p>
+
+<h3 id="favorites">Favorites</h3>
+<hr />
+
+<h4 id="walkingtourbothttpstwittercomwalkingtourbot"><a href="https://twitter.com/WalkingTourBot">@WalkingTourBot</a></h4>
+
+<p>This bot takes google walking directions as input and steps through them one at a time. Each time it tweets it posts 
+google streetview images of the location as well as two maps (one zoomed, one further out). As of this writing it's 
+walking from New York City to Los Angeles.</p>
+
+<blockquote class="twitter-tweet" lang="en"><p>464. Slight right to stay on 210 Rd (1.2 mi, 24m) <a href="http://t.co/PB2GdE0emF">pic.twitter.com/PB2GdE0emF</a></p>&mdash; Walking Tour (@WalkingTourBot) <a href="https://twitter.com/WalkingTourBot/status/540838017783857152">December 5, 2014</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p><br /><br /></p>
+
+<h4 id="janeaustenhaikuhttpstwittercomjaneaustenhaiku"><a href="https://twitter.com/JaneAustenHaiku">@JaneAustenHaiku</a></h4>
+
+<p>This bot concatenates Jane Austen's Emma", "Pride and Predjudice" and "Sense and Sensibility" together and then 
+runs through that entire text looking for series of words that fall into the 
+<a href="http://en.wikipedia.org/wiki/Haiku">haiku</a> patterns. The sentences don't have to be sequential, in fact almost 
+always they're not. Nor are they full sentences usually.</p>
+
+<blockquote class="twitter-tweet" lang="en"><p>It is my party&#10;What shall we do to rouse them&#10;Leave it all to me&#10;&#10;<a href="https://twitter.com/hashtag/Haiku?src=hash">#Haiku</a></p>&mdash; Jane Austen Haiku (@JaneAustenHaiku) <a href="https://twitter.com/JaneAustenHaiku/status/538633533716443136">November 29, 2014</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p><br /><br /></p>
+
+<h4 id="musicreviewbothttpstwittercommusicreviewbot"><a href="https://twitter.com/MusicReviewBot">@MusicReviewBot</a></h4>
+
+<p>This is one of my better "more natural looking" language bots. Inspired by the work done <a href="http://www.theatlantic.com/technology/archive/2014/01/how-netflix-reverse-engineered-hollywood/282679/">parsing Netflix 
+genres</a>, I 
+thought it would be fun to scrape <a href="http://pandora.com">Pandora</a> for the data they use to classify songs. I wrote a 
+spider that would grab a random song, cache its features and then move on to another related song and repeat over 
+and over. So I now have a corpus of features I can pick from at random to assemble a tweet from. The idea, then is 
+to do a "review" on this fictional song which ends up being just whether the bot "likes" or "doesn't like" the song. 
+In order to give some context I whipped up a random band and song name generator. While that wasn't the original 
+focus of the project, I ended up really liking the results of that.</p>
+
+<blockquote class="twitter-tweet" lang="en"><p>I don&#39;t like the electric bass riff and vocal effects with Celtic roots in Spaghetti Squash Helping&#39;s &quot;Exploding Gorilla&quot;</p>&mdash; Music Review Bot (@MusicReviewBot) <a href="https://twitter.com/MusicReviewBot/status/540536029632294912">December 4, 2014</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+<hr class="bottom-line">
