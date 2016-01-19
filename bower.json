@@ -1,0 +1,19 @@
+{
+  "name": "amarriner.com",
+  "description": "amarriner.com",
+  "main": "server.js",
+  "authors": [
+    "Aaron Marriner (amarriner@gmail.com)"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "http://amarriner.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

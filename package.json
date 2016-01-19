@@ -1,0 +1,19 @@
+{
+  "name": "amarriner.com",
+  "version": "2.1.0",
+  "description": "amarriner.com",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amarriner/amarriner.com.git"
+  },
+  "author": "Aaron Marriner <marrinea@strose.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amarriner/amarriner.com/issues"
+  },
+  "homepage": "https://github.com/amarriner/amarriner.com#readme"
+}
