@@ -6735,6 +6735,11 @@ h3 {
   font-weight: 700;
   margin-top: 30px;
 }
+#github h4,
+#twitter h4 {
+  font-weight: 400;
+  margin: 0;
+}
 .nav > li.open {
   background-color: white;
 }

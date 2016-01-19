@@ -4,6 +4,8 @@
     var module = angular.module('amarrinerCom', [
         'ngRoute',
         'ui.bootstrap',
+        'amarrinerCom.github',
+        'amarrinerCom.githubFactory',
         'amarrinerCom.navbar'
     ])
     .config(['$routeProvider', function($routeProvider) {
