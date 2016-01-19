@@ -70,6 +70,7 @@ module.exports = function(grunt) {
         htmlangular: {
             options: {
                 customattrs: [
+                    'uib-collapse'
                 ],
                 customtags: [
                 ],
