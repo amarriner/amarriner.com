@@ -6735,6 +6735,9 @@ h3 {
   font-weight: 700;
   margin-top: 30px;
 }
+#twitter {
+  padding-bottom: 40px;
+}
 #github h4,
 #twitter h4 {
   font-weight: 600;
@@ -6807,6 +6810,9 @@ div#sub {
 }
 div#sub .fa {
   color: #006600;
+}
+#logo {
+  margin-bottom: 40px;
 }
 #logo img {
   height: 42px;
